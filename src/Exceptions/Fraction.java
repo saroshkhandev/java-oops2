@@ -17,9 +17,7 @@ public class Fraction {
     public Fraction(int numerator, int denominator) throws ZeroDenominatorException {
         this.numerator = numerator;
         if(denominator == 0) {
-            Exception ZeroDenominatorException = new ZeroDenominatorException();
-            throw ZeroDenominatorException;
-
+            throw new ZeroDenominatorException();
         }
         this.denominator = denominator;
         simplify();
@@ -44,10 +42,9 @@ public class Fraction {
         return numerator;
     }
 
-    public void setDenominator(int denominator) {
+    public void setDenominator(int denominator) throws ZeroDenominatorException {
         if(denominator == 0) {
-//            TODO error out
-            return;
+            throw new ZeroDenominatorException();
         }
         this.denominator = denominator;
         simplify();
@@ -64,7 +61,7 @@ public class Fraction {
         else System.out.println(numerator + "/" + denominator);
     }
 
-    public static Fraction add(Fraction f1, Fraction f2) {
+    public static Fraction add(Fraction f1, Fraction f2) throws ZeroDenominatorException {
         int newNum = f1.numerator * f2.denominator + f1.denominator * f2.numerator;
         int newDen = f1.denominator * f2.denominator;
         return new Fraction(newNum, newDen);

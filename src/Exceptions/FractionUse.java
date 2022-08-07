@@ -13,7 +13,13 @@ public class FractionUse {
         f1.print();
 
         f1.setNumerator(10);
-        f1.setDenominator(0);
+
+        try {
+            f1.setDenominator(0);
+        } catch (ZeroDenominatorException e) {
+            System.out.println(e);
+        }
+
         f1.print();
 
         Fraction f2 = new Fraction(3, 4);
