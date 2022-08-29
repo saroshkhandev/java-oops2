@@ -7,11 +7,6 @@ public class BMW extends Car{
     }
 
     @Override
-    public boolean isMotorized() {
-        return super.isMotorized();
-    }
-
-    @Override
     public String getCompany() {
         return "BMW";
     }
