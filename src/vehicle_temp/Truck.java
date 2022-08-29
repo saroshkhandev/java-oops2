@@ -10,6 +10,11 @@ public class Truck extends Vehicle {
         return false;
     }
 
+    @Override
+    public String getCompany() {
+        return null;
+    }
+
     public Truck(int maxSpeed) {
         super(maxSpeed);
         System.out.println("Truck Constructor");

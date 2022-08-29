@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface VehicleInterface {
+public interface VehicleInterface extends CarInterface {
 
     public int getMaxSpeed();
     public void print();

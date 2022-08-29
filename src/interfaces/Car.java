@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Car extends Vehicle implements VehicleInterface, CarInterface {
+public class Car extends Vehicle implements VehicleInterface {
     @Override
     public void print() {
 
