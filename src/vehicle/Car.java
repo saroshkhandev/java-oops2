@@ -1,6 +1,6 @@
 package vehicle;
 
-public class Car extends Vehicle {
+public abstract class Car extends Vehicle {
     int numGears;
     boolean isConvertible;
 
@@ -9,6 +9,12 @@ public class Car extends Vehicle {
         this.numGears = numGears;
         System.out.println("Car Constructor");
     }
+
+    @Override
+    public boolean isMotorized() {
+        return false;
+    }
+
 
     public boolean isConvertible() {
         return isConvertible;

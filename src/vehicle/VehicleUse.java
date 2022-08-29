@@ -9,10 +9,13 @@ public class VehicleUse {
 //        System.out.println(v.color + " " + v.getNumber());
 
         Car c = new Car(6, 250);
+        System.out.println("is motorized: " + c.isMotorized());
 
         Vehicle v = new Car(6, 250);
 
         v.print();
+
+
 /*
         Car c;
         System.out.println(c);

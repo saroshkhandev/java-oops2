@@ -1,6 +1,6 @@
 package vehicle;
 
-public class Vehicle {
+public abstract class Vehicle {
 //    private Vehicle(){
 //        System.out.println("constructor of Vehicle");
 //    } this will give compilation error.
@@ -17,6 +17,9 @@ public class Vehicle {
 //    }
 
     private int maxSpeed;
+
+    public abstract boolean isMotorized();
+    public abstract String getCompany();
 
     public Vehicle(int maxSpeed) {
         this.maxSpeed = maxSpeed;
